@@ -1,0 +1,62 @@
+<style>
+body {
+margin:0px;
+padding:0px;
+background-color:black;
+font-family: "Times", "Times New Roman"; 
+letter-spacing:10px;
+color:white;
+}
+
+body > .LOADING {
+	position:absolute;
+	z-index:1;
+	text-align:center;
+	width:100%;
+	font-size:20px;
+	top:44vh;
+}
+
+
+body > .NAME {
+	position:absolute;
+	z-index:3;
+	text-align:center;
+	width:60%;
+	letter-spacing:10px;
+	margin-left:20%;
+	font-size:60px;
+	top:40vh;
+text-shadow: #ddd 1px 0 10px;	
+	display:none;
+}
+
+body > iframe {
+	width: 100%;
+	height: 100vh;
+	position:relative;
+	
+z-index:2;
+}
+</style>
+
+<body>
+	<div class="LOADING">LOADING...</div>
+<iframe allow="autoplay; fullscreen" src="https://player.vimeo.com/video/329207893?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script>
+$(window).on('pageshow',function(){
+    var vids = document.querySelectorAll('video');
+    for (var i = 0; i < vids.length;){
+        vids[i].play();
+    }
+})
+
+
+</script>
+</body>
